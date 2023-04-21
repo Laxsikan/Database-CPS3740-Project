@@ -1,0 +1,38 @@
+For HTML form array, You need to set tag name to be array in HTML as shown in below example:
+
+<FORM ...>
+#The inputs should be inside the loop in the php program which will generate the HTML form.
+
+<input type='hidden' name='product_id[$i]' value='3'>
+<input type='text' size=4 name='cost[$i]' value='400'>
+<input type='hidden' name='user_id[$i] value='7'>
+……
+#don’t forget to have $i++
+</FORM>
+
+
+In the php program, you need to use a loop and POST array to get all the values from HTML form. You can refer to below codes:
+
+for($i=0;$i<count($_POST["product_id"]);$i++)  {
+  $product_id[$i]=$_POST["product_id"][$i];
+  $product_name[$i]=$_POST["product_name"][$i];
+  $cost[$i]=$_POST["cost"][$i];
+  ...
+}
+
+
+You can refer to below examples about how to send multiple product records on HTML form, retrieve them in PHP program and update the records on mysql. 
+
+http://www.sourcecodester.com/php/3863/updating-multiple-rows-mysql-using-php.html
+
+## http://www.phpeasystep.com/mysql/10.html  --> not avaialble sometimes.
+
+The key is to have array type on input name (like address[$i], $i is the loop index when you display all the products) as shown below
+input type='text' size='40' name='address[$i]'
+<input type='hidden' name='id[$i]' value='...'>
+
+and retrieve the variable name and value as shown below:
+$address= $_POST['address'][$i];
+
+Below statement shows how to get the number of records sent from HTML FORM in PHP program.
+$size = count($_POST['address']);
