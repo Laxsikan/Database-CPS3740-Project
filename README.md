@@ -8,5 +8,5 @@ Website 04/29/2023
 
 In my coding project, I developed a dynamic banking website utilizing a robust 3-tier architecture to provide users with the ability to perform Create, Read, Update, and Delete (CRUD) operations on a secure database. This project was built on a stack of technologies that included MariaDB, Apache, PHP, MySQL, MySQL Workbench, FileZilla, and a Linux-based server environment.
 
-https://camo.githubusercontent.com/5da3f438c607d366e2d
+
 ![image](https://github.com/Laxsikan/Database-CPS3740-Project/assets/112958648/7fdb1947-5564-4d88-813e-a41a8e8ef4eb)
